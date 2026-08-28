@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-# Auto detect text files and perform LF normalization
-* text=auto
-=======
-# Shell scripts must keep LF endings or bash on Vercel's Linux builder fails
-# on the CR. Everything else can normalise.
+# Shell scripts must keep LF endings or bash fails on the CR on Linux builders.
 *.sh text eol=lf
 * text=auto
 
 *.png binary
 *.jpg binary
 *.woff2 binary
->>>>>>> ccb65af (Comity: bilingual cross-border site, phases 1-13)

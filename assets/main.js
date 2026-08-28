@@ -58,46 +58,56 @@
   }
 }());
 
-/* Theme control. The stylesheet defines all three states already — bare :root
-   for light, prefers-color-scheme for the unstamped default, and an explicit
-   data-theme stamp that beats both. This only cycles the stamp.
-   Order: Auto → Light → Dark. Auto removes the stamp and returns the page to
-   the viewer's OS setting, which is the correct default and so comes first. */
+/* Day / night. Two states, nothing else.
+
+   The stylesheet still supports three — bare :root, prefers-color-scheme,
+   and an explicit data-theme stamp. On a first visit there is no stamp, so
+   the page follows the reader's OS setting; the control simply reports which
+   of the two the reader is actually looking at, and swaps it. */
 (function () {
   'use strict';
   var btn = document.getElementById('theme-toggle');
   if (!btn) return;
 
   var root = document.documentElement;
-  var label = btn.querySelector('[data-theme-label]');
-  var isES = (document.documentElement.lang || 'en').indexOf('es') === 0;
-  var NAMES = isES
-    ? { auto: 'Auto', light: 'Claro', dark: 'Oscuro' }
-    : { auto: 'Auto', light: 'Light', dark: 'Dark' };
-  var ORDER = ['auto', 'light', 'dark'];
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  var isES = (root.lang || 'en').indexOf('es') === 0;
+  var LABEL = isES
+    ? { light: 'Cambiar a modo noche', dark: 'Cambiar a modo día' }
+    : { light: 'Switch to night mode', dark: 'Switch to day mode' };
 
-  function read() {
+  function stored() {
     try {
       var v = localStorage.getItem('cc-theme');
-      return (v === 'light' || v === 'dark') ? v : 'auto';
-    } catch (e) { return 'auto'; }
+      return (v === 'light' || v === 'dark') ? v : null;
+    } catch (e) { return null; }
   }
 
-  function apply(mode) {
-    if (mode === 'auto') root.removeAttribute('data-theme');
-    else root.setAttribute('data-theme', mode);
-    if (label) label.textContent = NAMES[mode];
-    btn.setAttribute('aria-label',
-      (isES ? 'Tema: ' : 'Theme: ') + NAMES[mode]);
-    try {
-      if (mode === 'auto') localStorage.removeItem('cc-theme');
-      else localStorage.setItem('cc-theme', mode);
-    } catch (e) { /* private mode — the choice just won't persist */ }
+  // What the reader is actually seeing right now.
+  function effective() {
+    return stored() || (mq && mq.matches ? 'dark' : 'light');
   }
 
-  apply(read());
+  function paint(mode) {
+    btn.setAttribute('data-mode', mode);
+    btn.setAttribute('aria-label', LABEL[mode]);
+    btn.setAttribute('title', LABEL[mode]);
+  }
+
+  function set(mode) {
+    root.setAttribute('data-theme', mode);
+    try { localStorage.setItem('cc-theme', mode); } catch (e) { /* private mode */ }
+    paint(mode);
+  }
+
+  paint(effective());
 
   btn.addEventListener('click', function () {
-    apply(ORDER[(ORDER.indexOf(read()) + 1) % ORDER.length]);
+    set(effective() === 'dark' ? 'light' : 'dark');
   });
+
+  // Follow the OS while the reader has not chosen for themselves.
+  if (mq && mq.addEventListener) {
+    mq.addEventListener('change', function () { if (!stored()) paint(effective()); });
+  }
 }());

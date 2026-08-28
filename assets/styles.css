@@ -541,11 +541,24 @@ a.card:hover .card-title { color: var(--accent); }
   .featured { padding: var(--s6) var(--s5); }
 }
 
-/* Theme control. Sits with the other utilities; text, never an icon —
-   consistent with the language toggle. */
+/* Day / night control. Icons rather than text — the one place on the site
+   where a mark beats a word, because the two states are universally read.
+   Sized to a 44px touch target: it was 29px and unhittable on a phone. */
 .util--theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -8px 0;
   border: 1px solid var(--rule);
-  padding: .32rem .6rem;
   color: var(--slate);
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  flex: 0 0 auto;
 }
 .util--theme:hover { border-color: var(--accent); color: var(--accent); }
+.util--theme .ico { display: none; }
+.util--theme[data-mode="light"] .ico-sun  { display: block; }
+.util--theme[data-mode="dark"]  .ico-moon { display: block; }

@@ -540,3 +540,12 @@ a.card:hover .card-title { color: var(--accent); }
   .shell { padding: 0 var(--s4); }
   .featured { padding: var(--s6) var(--s5); }
 }
+
+/* Theme control. Sits with the other utilities; text, never an icon —
+   consistent with the language toggle. */
+.util--theme {
+  border: 1px solid var(--rule);
+  padding: .32rem .6rem;
+  color: var(--slate);
+}
+.util--theme:hover { border-color: var(--accent); color: var(--accent); }

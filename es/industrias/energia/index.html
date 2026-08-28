@@ -25,6 +25,7 @@
   ]
 }
 </script>
+<script>try{var t=localStorage.getItem("cc-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
@@ -49,6 +50,7 @@
         <div class="utils">
           <span class="util"><a class="util" href="/en/" hreflang="en" lang="en">EN</a> / <span aria-current="true">ES</span></span>
           <a class="util util--search" href="/es/buscar/">Buscar</a>
+          <button class="util util--theme" id="theme-toggle" type="button" aria-label="Tema" title="Tema"><span data-theme-label>Auto</span></button>
           <a class="btn btn--primary" href="/es/la-firma/contacto/">Solicitar una consulta</a>
         </div>
       </nav>

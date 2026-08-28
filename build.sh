@@ -166,6 +166,9 @@ fi
 echo "Generating site index:"
 node gen-index.js
 
+echo "Cache-busting assets:"
+node bust.js
+
 # --- canonical host rewrite ------------------------------------------------
 if [ "$SITE_URL" != "https://example.com" ]; then
   find en es -name index.html -exec sed -i "s|https://example\.com|$SITE_URL|g" {} +

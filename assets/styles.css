@@ -550,7 +550,10 @@ a.card:hover .card-title { color: var(--accent); }
   justify-content: center;
   width: 44px;
   height: 44px;
-  margin: -8px 0;
+  position: relative;
+  z-index: 2;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   border: 1px solid var(--rule);
   color: var(--slate);
   background: none;
@@ -562,3 +565,38 @@ a.card:hover .card-title { color: var(--accent); }
 .util--theme .ico { display: none; }
 .util--theme[data-mode="light"] .ico-sun  { display: block; }
 .util--theme[data-mode="dark"]  .ico-moon { display: block; }
+
+/* Compact capability lists on the landing page. Names only — the full
+   descriptions live on /capabilities/ and /industries/ and in the nav
+   panels, and repeating them here is what made the homepage a scroll. */
+.caps-brief {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: var(--s7);
+  margin: var(--s7) 0 0;
+}
+.caps-brief > div > .label {
+  display: block;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--s2);
+  margin: 0 0 var(--s4);
+}
+.taglist { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s2); }
+.taglist li { margin: 0; padding: 0; }
+.taglist li::marker { content: none; }
+.taglist a {
+  display: inline-block;
+  font-size: .85rem;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--rule);
+  padding: .42rem .7rem;
+  line-height: 1.3;
+}
+.taglist a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Touch targets on small screens: taps, not clicks. */
+@media (max-width: 52rem) {
+  .taglist a { padding: .6rem .8rem; }
+  .util--theme { width: 46px; height: 46px; }
+}

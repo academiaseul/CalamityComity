@@ -141,7 +141,7 @@ done
 [ $bad -eq 0 ] && note "ok" "all asset references are root-absolute"
 
 missing=0
-for u in $(grep -hoE '(href|src)="/assets/[^"]*"' $PAGES | sed -E 's/.*="//; s/"$//' | sort -u); do
+for u in $(grep -hoE '(href|src)="/assets/[^"]*"' $PAGES | sed -E 's/.*="//; s/"$//; s/\?.*$//' | sort -u); do
   if [ ! -f ".$u" ]; then note "404" "$u referenced but absent"; missing=1; FAIL=1; fi
 done
 [ $missing -eq 0 ] && note "ok" "every referenced asset exists on disk"

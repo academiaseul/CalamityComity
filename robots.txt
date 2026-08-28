@@ -1,0 +1,9 @@
+# Comity
+User-agent: *
+Allow: /
+
+# Search results carry no unique content.
+Disallow: /en/search/
+Disallow: /es/buscar/
+
+Sitemap: https://example.com/sitemap.xml

@@ -1,0 +1,144 @@
+/* ==========================================================================
+   COMITY — Capability templates
+   T06 practice detail and T07 advisory detail. The two share a shell and
+   diverge deliberately: advisory carries a disclosure band and a "what this
+   is not" block that the legal template does not have. (Phase 02 §06)
+   ========================================================================== */
+
+/* --- Page header --------------------------------------------------------- */
+
+.cap-head { padding: var(--s8) 0 var(--s7); border-bottom: 1.5px solid var(--ink); }
+.cap-kicker {
+  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); margin: 0 0 var(--s5);
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--slate);
+}
+.cap-kicker a { color: inherit; }
+.cap-kicker .kind { color: var(--accent); }
+.cap-kicker .nonlegal { color: var(--warn); }
+.cap-head h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2rem, 5.2vw, 3.2rem); line-height: 1.05;
+  letter-spacing: -.024em; text-wrap: balance; margin: 0 0 var(--s5);
+}
+.cap-stand {
+  font-family: var(--serif); font-size: clamp(1.08rem, 2.3vw, 1.32rem);
+  line-height: 1.5; color: var(--slate); max-width: 54ch; margin: 0;
+}
+
+/* --- Advisory disclosure band — T07 only --------------------------------- */
+
+.disclosure-band {
+  border: 1px solid var(--warn); border-left-width: 2px;
+  background: var(--surface);
+  padding: var(--s5); margin: var(--s6) 0 0; max-width: 72ch;
+}
+.disclosure-band .dh {
+  font-family: var(--mono); font-size: .64rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--warn);
+  display: block; margin-bottom: var(--s3);
+}
+.disclosure-band p { margin: 0; font-size: .93rem; line-height: 1.6; }
+.disclosure-band p + p { margin-top: var(--s3); }
+
+/* --- Body sections ------------------------------------------------------- */
+
+.cap-section { padding: var(--s8) 0; border-top: 1px solid var(--rule-soft); }
+.cap-section:first-of-type { border-top: none; }
+.cap-section h2 {
+  font-family: var(--serif); font-weight: 600; font-size: clamp(1.35rem, 3vw, 1.75rem);
+  line-height: 1.18; letter-spacing: -.014em; margin: 0 0 var(--s5);
+}
+.cap-section .prose p { margin: 0 0 var(--s5); }
+.cap-section .prose p:last-child { margin-bottom: 0; }
+
+/* Who we help — client type mapped to a journey */
+.who-grid { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.who { background: var(--raised); padding: var(--s5); display: flex; flex-direction: column; gap: var(--s3); text-decoration: none; color: inherit; }
+.who:hover { background: var(--surface); }
+.who:hover .who-title { color: var(--accent); }
+.who-id { font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.who-title { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; line-height: 1.28; margin: 0; }
+.who p { font-size: .89rem; color: var(--slate); line-height: 1.55; margin: 0; }
+
+/* Problems we solve — the seam failures, named */
+.problems { list-style: none; margin: 0; padding: 0; max-width: var(--measure); counter-reset: p; }
+.problems li {
+  counter-increment: p; position: relative;
+  padding: var(--s5) 0 var(--s5) var(--s7);
+  border-top: 1px solid var(--rule-soft); margin: 0;
+}
+.problems li:first-child { border-top: 1px solid var(--rule); }
+.problems li::before {
+  content: counter(p, decimal-leading-zero); position: absolute; left: 0; top: var(--s5);
+  font-family: var(--mono); font-size: .78rem; color: var(--accent);
+}
+.problems b { display: block; font-family: var(--serif); font-weight: 600; font-size: 1.08rem; margin-bottom: var(--s2); }
+.problems span { font-size: .93rem; color: var(--slate); line-height: 1.6; }
+
+/* Jurisdiction implication blocks */
+.jur-block { border-top: 1px solid var(--rule); padding-top: var(--s5); margin-top: var(--s6); max-width: var(--measure); }
+.jur-block:first-of-type { margin-top: 0; }
+.jur-block .jtag {
+  font-family: var(--mono); font-size: .63rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent); display: block; margin-bottom: var(--s3);
+}
+.jur-block h3 { font-family: var(--serif); font-weight: 600; font-size: 1.24rem; margin: 0 0 var(--s4); letter-spacing: -.01em; }
+.jur-block p { margin: 0 0 var(--s4); }
+.jur-block p:last-child { margin-bottom: 0; }
+
+/* Who advises — replaces KEY PEOPLE while the roster is undisclosed */
+.advises { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+.advises div { background: var(--raised); padding: var(--s5); }
+.advises .at { font-family: var(--mono); font-size: .63rem; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: var(--s3); }
+.advises h3 { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; margin: 0 0 var(--s2); }
+.advises p { margin: 0; font-size: .89rem; color: var(--slate); line-height: 1.6; }
+
+/* Deliverables — advisory only */
+.deliverables { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.deliverables li {
+  padding: var(--s4) 0; border-top: 1px solid var(--rule-soft);
+  display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: var(--s2) var(--s5);
+  margin: 0;
+}
+.deliverables li:first-child { border-top: 1px solid var(--rule); }
+.deliverables b { font-family: var(--serif); font-weight: 600; font-size: 1.02rem; }
+.deliverables span { font-size: .9rem; color: var(--slate); line-height: 1.55; }
+
+/* "What this is not" — advisory only */
+.not-this { border-left: 2px solid var(--warn); padding-left: var(--s5); max-width: var(--measure); }
+.not-this h3 { font-family: var(--serif); font-weight: 600; font-size: 1.12rem; margin: 0 0 var(--s3); }
+.not-this ul { margin: 0; padding-left: var(--s5); }
+.not-this li { font-size: .93rem; color: var(--slate); margin-bottom: var(--s3); }
+
+/* Capability index */
+.cap-index { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: var(--s8); }
+.cap-index-col > .label { display: block; border-bottom: 1px solid var(--rule); padding-bottom: var(--s2); margin-bottom: var(--s2); }
+.cap-index-note {
+  font-family: var(--mono); font-size: .63rem; line-height: 1.9; letter-spacing: .04em;
+  color: var(--mute); margin: var(--s3) 0 0;
+}
+
+/* Contact block */
+.cap-contact { border-top: 1.5px solid var(--ink); padding: var(--s7) 0 0; margin-top: var(--s8); }
+.cap-contact h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem,3.4vw,2.1rem); letter-spacing: -.018em; margin: 0 0 var(--s4); }
+
+@media (max-width: 60rem) {
+  .deliverables li { grid-template-columns: 1fr; gap: var(--s2); }
+}
+
+/* --- Taxonomy rows (shared shape with the article template) --------------- */
+
+.taxonomy { border-top: 1px solid var(--rule); padding-top: var(--s5); }
+.taxrow { display: grid; grid-template-columns: 8.5rem minmax(0,1fr); gap: var(--s3) var(--s5); padding: var(--s3) 0; }
+.taxrow dt {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--mute);
+}
+.taxrow dd { margin: 0; display: flex; flex-wrap: wrap; gap: var(--s2) var(--s4); }
+.taxrow dd a { font-size: .89rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.taxrow dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+@media (max-width: 60rem) {
+  .taxrow { grid-template-columns: 1fr; gap: var(--s2); }
+}

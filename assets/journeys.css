@@ -1,0 +1,119 @@
+/* ==========================================================================
+   COMITY — Journey templates
+   Loaded alongside capabilities.css.
+
+   §23 asks for these to be discoverable "without making the website feel
+   like a generic funnel". The device is the sequence: each step states the
+   decision, what typically goes wrong at it, and who answers it. A page
+   that is useful before you engage anyone does not read as a funnel.
+   ========================================================================== */
+
+.journey-hero { padding: var(--s8) 0 var(--s7); border-bottom: 1.5px solid var(--ink); }
+.journey-hero .dir {
+  display: inline-block; margin-bottom: var(--s5);
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--accent);
+  border: 1px solid var(--accent); padding: .45rem .8rem;
+}
+.journey-hero h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2rem, 5.2vw, 3.2rem); line-height: 1.05;
+  letter-spacing: -.024em; text-wrap: balance; margin: 0 0 var(--s5);
+}
+.journey-hero .lead {
+  font-family: var(--serif); font-size: clamp(1.08rem, 2.3vw, 1.32rem);
+  line-height: 1.5; color: var(--slate); max-width: 54ch; margin: 0;
+}
+
+/* --- The sequence -------------------------------------------------------- */
+
+.sequence { counter-reset: step; }
+
+.step {
+  counter-increment: step;
+  display: grid; grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: var(--s5);
+  padding: var(--s6) 0;
+  border-top: 1px solid var(--rule);
+}
+.step:first-child { border-top: 1.5px solid var(--ink); }
+.step:last-child { border-bottom: 1.5px solid var(--ink); }
+
+.step-num {
+  font-family: var(--mono); font-size: .8rem; letter-spacing: .06em;
+  color: var(--accent); padding-top: .3rem;
+}
+.step-num::before { content: counter(step, decimal-leading-zero); }
+
+.step h3 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(1.18rem, 2.5vw, 1.42rem); line-height: 1.25;
+  letter-spacing: -.012em; margin: 0 0 var(--s3);
+}
+.step > div > p { margin: 0 0 var(--s4); max-width: 62ch; font-size: .96rem; line-height: 1.6; }
+
+.step-risk {
+  border-left: 2px solid var(--warn);
+  padding: var(--s2) 0 var(--s2) var(--s4);
+  margin: 0 0 var(--s4); max-width: 62ch;
+}
+.step-risk .rl {
+  display: block; margin-bottom: var(--s2);
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--warn);
+}
+.step-risk p { margin: 0; font-size: .92rem; line-height: 1.6; color: var(--slate); }
+
+.step-who { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s3); align-items: baseline; }
+.step-who .wl {
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--mute);
+}
+.step-who a {
+  font-size: .86rem; color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+.step-who a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* --- Checklist. The anti-funnel device: useful without engaging anyone. --- */
+
+.checklist { border: 1px solid var(--rule); background: var(--surface); padding: var(--s7) var(--s6); }
+.checklist h2 {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.2;
+  letter-spacing: -.014em; margin: 0 0 var(--s3);
+}
+.checklist .intro { font-size: .95rem; color: var(--slate); line-height: 1.6; margin: 0 0 var(--s5); max-width: 60ch; }
+.checklist ol { list-style: none; counter-reset: q; margin: 0; padding: 0; }
+.checklist li {
+  counter-increment: q; position: relative;
+  padding: var(--s4) 0 var(--s4) var(--s7);
+  border-top: 1px solid var(--rule);
+  font-family: var(--serif); font-size: 1.06rem; line-height: 1.45;
+  margin: 0;
+}
+.checklist li::before {
+  content: counter(q); position: absolute; left: 0; top: var(--s4);
+  font-family: var(--mono); font-size: .75rem; color: var(--accent);
+}
+.checklist .outro {
+  margin: var(--s5) 0 0; padding-top: var(--s4); border-top: 1px solid var(--rule);
+  font-size: .92rem; color: var(--slate); line-height: 1.6; max-width: 60ch;
+}
+
+/* --- First engagement ---------------------------------------------------- */
+
+.first-eng { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.first-eng div { background: var(--raised); padding: var(--s5); }
+.first-eng .fl {
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--accent); display: block; margin-bottom: var(--s3);
+}
+.first-eng h3 { font-family: var(--serif); font-weight: 600; font-size: 1.04rem; margin: 0 0 var(--s2); }
+.first-eng p { margin: 0; font-size: .88rem; color: var(--slate); line-height: 1.55; }
+
+@media (max-width: 60rem) {
+  .step { grid-template-columns: 1fr; gap: var(--s2); }
+  .step-num { padding-top: 0; }
+  .checklist { padding: var(--s6) var(--s5); }
+}

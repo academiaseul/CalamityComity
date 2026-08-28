@@ -1,0 +1,12 @@
+# Belt-and-braces. build.sh --deploy never creates these, but if a stale
+# local copy exists it must not be uploaded. The roster is undisclosed.
+_dark/
+_preview/
+
+# Review + tooling artifacts
+audit.sh
+README.md
+*.bak
+
+# Stylesheet for the dark roster templates. No served page loads it.
+assets/people.css

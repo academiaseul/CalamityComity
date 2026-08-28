@@ -1,0 +1,142 @@
+/* ==========================================================================
+   COMITY — People templates  ·  BUILT, NOT PUBLISHED
+   T19 directory and profile. These assemble to _dark/ rather than into the
+   served tree: the roster is undisclosed by decision (Phase 01 §11.2), and
+   an unpublished page that is merely unlinked is still a published page.
+   ========================================================================== */
+
+/* --- Build-mode banner. Never ships. ------------------------------------- */
+
+.dark-banner {
+  background: var(--ink); color: var(--paper);
+  padding: var(--s3) 0;
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.dark-banner .shell { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); align-items: baseline; }
+.dark-banner b { color: var(--accent); font-weight: 500; }
+.dark-banner span { opacity: .72; }
+
+/* --- Directory ----------------------------------------------------------- */
+
+.people-grid {
+  display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+
+.person {
+  background: var(--raised); padding: var(--s5);
+  display: flex; flex-direction: column; gap: var(--s3);
+  text-decoration: none; color: inherit;
+}
+.person:hover { background: var(--surface); }
+.person:hover .person-name { color: var(--accent); }
+
+.person-role {
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--slate);
+  display: flex; flex-wrap: wrap; gap: var(--s1) var(--s4);
+}
+.person-role .loc { color: var(--accent); }
+.person-role .nonlegal { color: var(--warn); }
+
+.person-name {
+  font-family: var(--serif); font-weight: 600; font-size: 1.24rem;
+  line-height: 1.2; letter-spacing: -.012em; margin: 0;
+}
+.person-title { font-size: .89rem; color: var(--slate); margin: 0; line-height: 1.5; }
+
+.person-focus {
+  display: flex; flex-wrap: wrap; gap: var(--s2);
+  margin-top: var(--s1);
+}
+.person-focus span {
+  font-family: var(--mono); font-size: .59rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--slate);
+  border: 1px solid var(--rule); padding: .28rem .5rem;
+}
+
+/* Admissions carried at card level — the material fact in a cross-border firm */
+.person-adm {
+  margin-top: auto; padding-top: var(--s3); border-top: 1px solid var(--rule-soft);
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .1em;
+  text-transform: uppercase; line-height: 1.9; color: var(--mute);
+}
+.person-adm b { display: block; color: var(--ink); font-weight: 500; }
+.person-adm .none { color: var(--warn); }
+
+/* --- Profile ------------------------------------------------------------- */
+
+.profile-head { padding: var(--s8) 0 var(--s7); border-bottom: 1.5px solid var(--ink); }
+.profile-head .pk {
+  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); margin: 0 0 var(--s5);
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--slate);
+}
+.profile-head .pk a { color: inherit; }
+.profile-head .pk .loc { color: var(--accent); }
+.profile-head h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.05;
+  letter-spacing: -.024em; margin: 0 0 var(--s4);
+}
+.profile-title {
+  font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+  line-height: 1.5; color: var(--slate); max-width: 52ch; margin: 0 0 var(--s6);
+}
+.profile-actions { display: flex; flex-wrap: wrap; gap: var(--s3); }
+
+.profile-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 19rem); gap: var(--s8); padding: var(--s8) 0; }
+
+.profile-section { border-top: 1px solid var(--rule-soft); padding: var(--s7) 0; }
+.profile-section:first-child { border-top: none; padding-top: 0; }
+.profile-section h2 {
+  font-family: var(--sans); font-weight: 600; font-size: .78rem;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--accent);
+  margin: 0 0 var(--s4);
+}
+.profile-section p { margin: 0 0 var(--s4); max-width: var(--measure); }
+.profile-section p:last-child { margin-bottom: 0; }
+
+.facts { margin: 0; }
+.fact { display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr); gap: var(--s2) var(--s5); padding: var(--s3) 0; border-top: 1px solid var(--rule-soft); }
+.fact:first-child { border-top: none; padding-top: 0; }
+.fact dt {
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mute);
+}
+.fact dd { margin: 0; font-size: .91rem; line-height: 1.6; }
+.fact dd a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.fact dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Sidebar */
+.profile-side { align-self: start; }
+.side-box { border: 1px solid var(--rule); background: var(--surface); padding: var(--s5); margin-bottom: var(--s5); }
+.side-box h2 {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 var(--s3);
+  padding-bottom: var(--s2); border-bottom: 1px solid var(--rule);
+}
+.side-box ul { list-style: none; margin: 0; padding: 0; }
+.side-box li { margin-bottom: var(--s2); font-size: .88rem; }
+.side-box a { color: var(--ink); text-decoration: none; }
+.side-box a:hover { color: var(--accent); text-decoration: underline; }
+.side-box p { margin: 0; font-size: .88rem; color: var(--slate); line-height: 1.6; }
+
+/* Selected matters — a second clearance gate beyond publication */
+.matters { list-style: none; margin: 0; padding: 0; max-width: var(--measure); }
+.matters li { padding: var(--s4) 0; border-top: 1px solid var(--rule-soft); font-size: .93rem; line-height: 1.6; }
+.matters li:first-child { border-top: 1px solid var(--rule); }
+.gate {
+  border: 1px dashed var(--warn); padding: var(--s5); margin-top: var(--s4); max-width: var(--measure);
+}
+.gate .gh {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--warn); display: block; margin-bottom: var(--s3);
+}
+.gate p { margin: 0; font-size: .9rem; color: var(--slate); line-height: 1.6; }
+
+@media (max-width: 62rem) {
+  .profile-body { grid-template-columns: 1fr; gap: var(--s7); }
+  .fact { grid-template-columns: 1fr; gap: var(--s1); }
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search — Comity</title>
+<meta name="description" content="Search insights, capabilities, industries and jurisdictions across the Argentina–New York corridor.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://example.com/en/search/">
+<link rel="alternate" hreflang="en" href="https://example.com/en/search/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spectral:ital,wght@0,300;0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/insights.css">
+</head>
+<body>
+<!--@masthead-->
+
+<main id="main">
+
+<section class="desk-head" style="padding-bottom:32px">
+  <div class="shell">
+    <p class="kicker">Search</p>
+    <h1>Search</h1>
+    <form class="searchform" role="search" action="/en/search/" method="get">
+      <label class="skip" for="q">Search insights, capabilities, industries and jurisdictions</label>
+      <input id="q" name="q" type="search" value="delaware" placeholder="Insights, capabilities, industries, jurisdictions">
+      <button class="btn btn--primary" type="submit">Search</button>
+    </form>
+    <p class="micro" style="margin:0">Searching insights, capabilities, industries, journeys and jurisdiction pages.</p>
+  </div>
+</section>
+
+<section class="region" style="border-top:none;padding-top:32px">
+  <div class="shell">
+
+    <div class="filterbar">
+      <div class="filterrow">
+        <span class="fhead">Jurisdiction</span>
+        <button class="fchip" aria-pressed="false">Argentina</button>
+        <button class="fchip" aria-pressed="false">United States</button>
+        <button class="fchip" aria-pressed="true">Cross-border</button>
+      </div>
+      <div class="filterrow">
+        <span class="fhead">Content</span>
+        <button class="fchip" aria-pressed="false">Insights</button>
+        <button class="fchip" aria-pressed="false">Capabilities</button>
+        <button class="fchip" aria-pressed="false">Industries</button>
+        <button class="fchip" aria-pressed="false">Journeys</button>
+      </div>
+      <div class="filterrow">
+        <span class="fhead">Desk</span>
+        <button class="fchip" aria-pressed="false">Argentina Watch</button>
+        <button class="fchip" aria-pressed="false">Cross-Border Brief</button>
+        <button class="fchip" aria-pressed="false">Capital &amp; Investment</button>
+      </div>
+      <div class="filterrow">
+        <span class="fhead">Date</span>
+        <button class="fchip" aria-pressed="false">Past month</button>
+        <button class="fchip" aria-pressed="false">Past year</button>
+        <button class="fchip" aria-pressed="false">All time</button>
+      </div>
+    </div>
+
+    <div class="filter-summary">
+      <span><b>4</b> results for <b>delaware</b> in English</span>
+      <a class="btn btn--text filter-clear" href="/en/search/">Clear filters</a>
+    </div>
+
+    <!-- Locale-scoped results with a visible escape, per Phase 02 §10.
+         Never silently hide half the archive. -->
+    <div class="locale-escape">
+      <b>3 further results in Spanish.</b>
+      Results are shown in the language you are reading.
+      <a href="/es/buscar/?q=delaware" hreflang="es" lang="es">Ver resultados en español</a>
+    </div>
+
+    <ul class="results" style="margin-top:24px">
+      <li><a class="result" href="/en/insights/delaware-structure/" data-state="draft">
+        <span class="result-rail"><b>Analysis</b><span>Cross-Border Brief</span><span>27 Aug 2026</span></span>
+        <span>
+          <span class="result-title">The Delaware structure: what it does and does not solve for an Argentine company</span>
+          <span class="result-stand">Founders are told the flip is the answer. It resolves one set of problems precisely, and creates another that is discovered, reliably, in diligence.</span>
+          <span class="result-foot"><span>Cross-border</span><span>11 min</span></span>
+        </span>
+      </a></li>
+      <li><a class="result" href="/en/argentina-new-york/entering-the-united-states/">
+        <span class="result-rail"><b>Journey</b><span>AR → US</span></span>
+        <span>
+          <span class="result-title">Entering the United States</span>
+          <span class="result-stand">For Argentine companies and founders raising US capital, redomiciling or establishing US operations — from corporate structure through financing.</span>
+          <span class="result-foot"><span>Cross-border</span><span>Journey</span></span>
+        </span>
+      </a></li>
+      <li><a class="result" href="/en/capabilities/legal/cross-border-structuring/">
+        <span class="result-rail"><b>Capability</b><span>Legal</span></span>
+        <span>
+          <span class="result-title">Cross-Border Structuring</span>
+          <span class="result-stand">Holding structures that survive both tax regimes, both regulators and the diligence of a US investment committee.</span>
+          <span class="result-foot"><span>Cross-border</span><span>Practice</span></span>
+        </span>
+      </a></li>
+      <li><a class="result" href="/en/insights/diligence-across-the-seam/" data-state="draft">
+        <span class="result-rail"><b>Analysis</b><span>Cross-Border Brief</span><span>16 Jul 2026</span></span>
+        <span>
+          <span class="result-title">Diligence across the seam: the Argentine corporate history that stops a US financing</span>
+          <span class="result-stand">The problems that surface in a data room are almost never new. They are two years old and were cheap to fix at the time.</span>
+          <span class="result-foot"><span>Cross-border</span><span>12 min</span></span>
+        </span>
+      </a></li>
+    </ul>
+
+  </div>
+</section>
+
+</main>
+
+<!--@footer-->
+<script src="/assets/main.js" defer></script>
+</body>
+</html>

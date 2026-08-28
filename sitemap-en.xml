@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://example.com/en/argentina-new-york/argentina/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/argentina/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/argentina/" />
+  </url>
+  <url><loc>https://example.com/en/argentina-new-york/entering-the-united-states/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/entering-the-united-states/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/ingresar-a-estados-unidos/" />
+  </url>
+  <url><loc>https://example.com/en/argentina-new-york/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/" />
+  </url>
+  <url><loc>https://example.com/en/argentina-new-york/investing-in-argentina/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/investing-in-argentina/" />
+  </url>
+  <url><loc>https://example.com/en/argentina-new-york/operating-in-argentina/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/operating-in-argentina/" />
+  </url>
+  <url><loc>https://example.com/en/argentina-new-york/united-states/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/united-states/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/estados-unidos/" />
+  </url>
+  <url><loc>https://example.com/en/capabilities/advisory/market-entry/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/capabilities/advisory/market-entry/" />
+  </url>
+  <url><loc>https://example.com/en/capabilities/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/capabilities/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/servicios/" />
+  </url>
+  <url><loc>https://example.com/en/capabilities/legal/cross-border-structuring/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/capabilities/legal/cross-border-structuring/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/servicios/legal/estructuracion-transfronteriza/" />
+  </url>
+  <url><loc>https://example.com/en/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/" />
+  </url>
+  <url><loc>https://example.com/en/industries/energy/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/industries/energy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/industrias/energia/" />
+  </url>
+  <url><loc>https://example.com/en/industries/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/industries/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/industrias/" />
+  </url>
+  <url><loc>https://example.com/en/insights/argentina-watch/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/argentina-watch/" />
+  </url>
+  <url><loc>https://example.com/en/insights/delaware-structure/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/delaware-structure/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/perspectivas/estructura-delaware/" />
+  </url>
+  <url><loc>https://example.com/en/insights/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/perspectivas/" />
+  </url>
+  <url><loc>https://example.com/en/insights/topics/cross-border/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/topics/cross-border/" />
+  </url>
+</urlset>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://example.com/es/argentina-nueva-york/argentina/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/argentina/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/argentina/" />
+  </url>
+  <url><loc>https://example.com/es/argentina-nueva-york/estados-unidos/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/estados-unidos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/united-states/" />
+  </url>
+  <url><loc>https://example.com/es/argentina-nueva-york/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/" />
+  </url>
+  <url><loc>https://example.com/es/argentina-nueva-york/ingresar-a-estados-unidos/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/argentina-nueva-york/ingresar-a-estados-unidos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/argentina-new-york/entering-the-united-states/" />
+  </url>
+  <url><loc>https://example.com/es/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/" />
+  </url>
+  <url><loc>https://example.com/es/industrias/energia/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/industrias/energia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/industries/energy/" />
+  </url>
+  <url><loc>https://example.com/es/industrias/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/industrias/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/industries/" />
+  </url>
+  <url><loc>https://example.com/es/perspectivas/estructura-delaware/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/perspectivas/estructura-delaware/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/delaware-structure/" />
+  </url>
+  <url><loc>https://example.com/es/perspectivas/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/perspectivas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/insights/" />
+  </url>
+  <url><loc>https://example.com/es/servicios/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/servicios/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/capabilities/" />
+  </url>
+  <url><loc>https://example.com/es/servicios/legal/estructuracion-transfronteriza/</loc><lastmod>2026-08-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://example.com/es/servicios/legal/estructuracion-transfronteriza/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/capabilities/legal/cross-border-structuring/" />
+  </url>
+</urlset>

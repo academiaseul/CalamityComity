@@ -1,0 +1,103 @@
+/* ==========================================================================
+   COMITY — Industry templates
+   Loaded alongside capabilities.css, which supplies the page shell.
+   The chain component implements the §12 cascade: a business problem, the
+   legal / regulatory / cross-border questions it generates, and the
+   capabilities that answer them. Made specific rather than diagrammatic —
+   a generic flow chart would say nothing a reader could act on.
+   ========================================================================== */
+
+.chain {
+  border-top: 1.5px solid var(--ink);
+  padding: var(--s6) 0 var(--s7);
+  counter-increment: chain;
+}
+.chain:last-of-type { border-bottom: 1.5px solid var(--ink); }
+
+.chain-head { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--s5); align-items: start; }
+.chain-num {
+  font-family: var(--mono); font-size: .8rem; letter-spacing: .06em;
+  color: var(--accent); padding-top: .35rem;
+}
+.chain-problem {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(1.2rem, 2.6vw, 1.45rem); line-height: 1.28;
+  letter-spacing: -.012em; margin: 0 0 var(--s3);
+}
+.chain-context { font-size: .95rem; color: var(--slate); line-height: 1.6; margin: 0; max-width: 62ch; }
+
+.chain-links {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+  margin: var(--s5) 0 0 calc(3rem + var(--s5));
+}
+.chain-link { background: var(--raised); padding: var(--s4) var(--s5) var(--s5); }
+.chain-link .cl {
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--accent);
+  display: block; margin-bottom: var(--s3);
+  padding-bottom: var(--s2); border-bottom: 1px solid var(--rule-soft);
+}
+.chain-link p { margin: 0; font-size: .89rem; line-height: 1.6; color: var(--ink); }
+
+.chain-practices {
+  margin: var(--s4) 0 0 calc(3rem + var(--s5));
+  display: flex; flex-wrap: wrap; gap: var(--s2) var(--s3); align-items: baseline;
+}
+.chain-practices .cp {
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--mute);
+}
+.chain-practices a {
+  font-size: .87rem; color: var(--ink); text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+.chain-practices a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Where we work — sector activities */
+.sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.sector { background: var(--raised); padding: var(--s5); }
+.sector h3 { font-family: var(--serif); font-weight: 600; font-size: 1.06rem; margin: 0 0 var(--s2); }
+.sector p { margin: 0; font-size: .88rem; color: var(--slate); line-height: 1.55; }
+
+/* Industry index rows */
+.ind-list { list-style: none; margin: 0; padding: 0; }
+.ind-list li { border-top: 1px solid var(--rule-soft); }
+.ind-list li:first-child { border-top: 1.5px solid var(--ink); }
+.ind-list li:last-child { border-bottom: 1.5px solid var(--ink); }
+.ind-row {
+  display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
+  gap: var(--s3) var(--s6); padding: var(--s6) 0;
+  text-decoration: none; color: inherit;
+}
+.ind-row:hover .ind-name { color: var(--accent); }
+.ind-name { font-family: var(--serif); font-weight: 600; font-size: 1.32rem; line-height: 1.2; letter-spacing: -.012em; }
+.ind-tag {
+  display: block; margin-top: var(--s2);
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mute);
+}
+.ind-desc { font-size: .95rem; color: var(--slate); line-height: 1.6; margin: 0 0 var(--s3); max-width: 62ch; }
+.ind-meta {
+  display: flex; flex-wrap: wrap; gap: var(--s1) var(--s4);
+  font-family: var(--mono); font-size: .61rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--mute);
+}
+
+/* Deferred / pending capability */
+.pending {
+  border: 1px dashed var(--rule); padding: var(--s5); margin-top: var(--s6);
+  max-width: 72ch;
+}
+.pending .ph {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--mute); display: block; margin-bottom: var(--s3);
+}
+.pending p { margin: 0; font-size: .9rem; color: var(--slate); line-height: 1.6; }
+
+@media (max-width: 60rem) {
+  .chain-head { grid-template-columns: 1fr; gap: var(--s2); }
+  .chain-num { padding-top: 0; }
+  .chain-links, .chain-practices { margin-left: 0; }
+  .ind-row { grid-template-columns: 1fr; gap: var(--s3); }
+}

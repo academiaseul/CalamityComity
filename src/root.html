@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comity — Argentina × New York</title>
+<meta name="description" content="Cross-border counsel for consequential decisions. Legal and strategic advisory across Argentina and New York.">
+<link rel="canonical" href="/">
+<link rel="alternate" hreflang="en" href="/en/">
+<link rel="alternate" hreflang="es" href="/es/">
+<link rel="alternate" hreflang="x-default" href="/">
+<meta name="robots" content="noindex, follow">
+<!-- Static fallback. Production negotiation is an edge rule (Accept-Language
+     + stored preference) that 302s to a prefixed URL. Neither locale is the
+     default: the root never serves content. (Phase 02 §05) -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('comity-locale');
+      var pref = stored || ((navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+      location.replace('/' + pref + '/');
+    } catch (e) { location.replace('/en/'); }
+  }());
+</script>
+<meta http-equiv="refresh" content="1;url=/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:wght@300;400&display=swap">
+<style>
+  :root { --paper:#E8E9E6; --ink:#16181C; --slate:#5B6167; --accent:#6E1420; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper:#16181A; --ink:#E2E4E1; --slate:#969C9F; --accent:#D4767F; } }
+  :root[data-theme="dark"] { --paper:#16181A; --ink:#E2E4E1; --slate:#969C9F; --accent:#D4767F; }
+  body { background:var(--paper); color:var(--ink); font-family:"IBM Plex Mono",monospace;
+         margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem; }
+  .w { text-align:center; }
+  .m { font-family:Spectral,Georgia,serif; font-size:clamp(1.9rem,6vw,2.8rem); letter-spacing:.22em;
+       text-transform:uppercase; line-height:1; margin:0 0 1.1rem; }
+  hr { border:none; border-top:1px solid var(--slate); opacity:.4; margin:0 0 .9rem; }
+  .d { font-size:.66rem; letter-spacing:.3em; text-transform:uppercase; color:var(--slate); margin:0 0 2.5rem; }
+  .x { color:var(--accent); }
+  .p { display:flex; gap:1.5rem; justify-content:center; font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; }
+  .p a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:.25rem; }
+</style>
+</head>
+<body>
+  <div class="w">
+    <p class="m">Comity</p>
+    <hr>
+    <p class="d">Argentina <span class="x">×</span> New York</p>
+    <p class="p">
+      <a href="/en/" hreflang="en">English</a>
+      <a href="/es/" hreflang="es" lang="es">Español</a>
+    </p>
+  </div>
+</body>
+</html>

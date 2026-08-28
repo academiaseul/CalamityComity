@@ -1,0 +1,84 @@
+/* ==========================================================================
+   COMITY — Corridor and jurisdiction templates
+   Loaded alongside capabilities.css, which supplies the page shell and the
+   .problems, .who-grid, .advises and .taxonomy components reused here.
+
+   Note the section these replace. A conventional firm has "Locations"
+   because it has offices. This firm's differentiator is the corridor, not
+   the real estate — and under §35 premises cannot be presented until they
+   are verified. So the section is capability, and the address is a fact
+   that appears when it is true. (Phase 02 §01)
+   ========================================================================== */
+
+/* --- Corridor hub -------------------------------------------------------- */
+
+.corridor-hero { padding: var(--s9) 0 var(--s8); border-bottom: 1.5px solid var(--ink); }
+.corridor-hero h1 {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(2.3rem, 6vw, 4rem); line-height: 1.03;
+  letter-spacing: -.028em; text-wrap: balance; margin: 0 0 var(--s6);
+  max-width: 20ch;
+}
+.corridor-hero .lead {
+  font-family: var(--serif); font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  line-height: 1.48; color: var(--slate); max-width: 54ch; margin: 0;
+}
+
+.essay { max-width: var(--measure); }
+.essay p { margin: 0 0 var(--s5); }
+.essay p:last-child { margin-bottom: 0; }
+.essay .drop::first-letter {
+  font-family: var(--serif); font-weight: 400;
+  font-size: 3.1em; line-height: .82; float: left;
+  padding: .06em .12em 0 0; color: var(--accent);
+}
+.essay blockquote {
+  margin: var(--s7) 0; padding: 0 0 0 var(--s5);
+  border-left: 2px solid var(--accent);
+  font-family: var(--serif); font-size: 1.32rem; line-height: 1.38; color: var(--ink);
+}
+.essay blockquote p { margin: 0; }
+
+/* --- Jurisdiction pages -------------------------------------------------- */
+
+/* Practical facts. Address is a row like any other — present when verified,
+   visibly pending when not. It is not the page's headline. */
+.presence { border-top: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); padding: var(--s5) 0; }
+.presence dl { margin: 0; }
+.presence .row {
+  display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  gap: var(--s2) var(--s5); padding: var(--s4) 0;
+  border-top: 1px solid var(--rule-soft);
+}
+.presence .row:first-child { border-top: none; padding-top: 0; }
+.presence .row:last-child { padding-bottom: 0; }
+.presence dt {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--mute);
+}
+.presence dd { margin: 0; font-size: .93rem; line-height: 1.6; }
+.presence dd b { font-weight: 600; }
+
+/* What we do not do here — the boundary, stated rather than implied */
+.boundary { border-left: 2px solid var(--rule); padding-left: var(--s5); max-width: var(--measure); }
+.boundary h3 { font-family: var(--serif); font-weight: 600; font-size: 1.1rem; margin: 0 0 var(--s3); }
+.boundary ul { margin: 0; padding-left: var(--s5); }
+.boundary li { font-size: .93rem; color: var(--slate); margin-bottom: var(--s3); line-height: 1.6; }
+
+/* Paired jurisdiction navigation */
+.jur-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+.jur-card { background: var(--raised); padding: var(--s6) var(--s5); display: flex; flex-direction: column; gap: var(--s3); text-decoration: none; color: inherit; }
+.jur-card:hover { background: var(--surface); }
+.jur-card:hover .jc-name { color: var(--accent); }
+.jur-card .jc-tag { font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.jur-card .jc-name { font-family: var(--serif); font-weight: 400; font-size: 1.75rem; letter-spacing: -.018em; margin: 0; line-height: 1.1; }
+.jur-card p { margin: 0; font-size: .9rem; color: var(--slate); line-height: 1.6; }
+.jur-card .jc-more {
+  margin-top: auto; padding-top: var(--s3);
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mute);
+}
+
+@media (max-width: 60rem) {
+  .presence .row { grid-template-columns: 1fr; gap: var(--s1); }
+}

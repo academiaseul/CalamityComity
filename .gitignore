@@ -1,0 +1,4 @@
+_dark/
+_preview/
+.vercel/
+node_modules/

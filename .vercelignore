@@ -10,3 +10,7 @@ README.md
 
 # Stylesheet for the dark roster templates. No served page loads it.
 assets/people.css
+
+# Local review server — not needed in deployment
+serve.js
+.claude/

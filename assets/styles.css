@@ -8,18 +8,18 @@
 
 :root {
   /* Brand */
-  --ink:          #16181C;
-  --slate:        #5B6167;
-  --mute:         #63696E;
-  --paper:        #E8E9E6;
-  --surface:      #F1F2EF;
-  --raised:       #FAFAF8;
-  --rule:         #C7C9C4;
-  --rule-soft:    #D9DBD7;
-  --accent:       #6E1420;
-  --accent-dim:   #8E3A44;
-  --accent-wash:  #E3DCDC;
-  --on-accent:    #F4F4F1;
+  --ink:          #0A3A2F;
+  --slate:        #4A5A55;
+  --mute:         #5E6F69;
+  --paper:        #FFFFFF;
+  --surface:      #F4F7F5;
+  --raised:       #FFFFFF;
+  --rule:         #C8D6D1;
+  --rule-soft:    #E2EBE7;
+  --accent:       #0A7A48;
+  --accent-dim:   #086139;
+  --accent-wash:  #E6F2EC;
+  --on-accent:    #FFFFFF;
 
   /* Semantic — deliberately desaturated, never competing with the accent */
   --ok:           #3D5A45;
@@ -27,8 +27,8 @@
   --err:          #8E2A2A;
 
   /* Type */
-  --serif:  Spectral, Georgia, "Times New Roman", serif;
-  --sans:   "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --serif:  "Bodoni Moda", Georgia, "Times New Roman", serif;
+  --sans:   Archivo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --mono:   "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Spacing — 4px base, used exclusively */
@@ -39,22 +39,25 @@
   --measure: 68ch;
   --content: 1280px;
   --gutter:  24px;
+
+  /* Reference uses a 2px softening rather than hard square. */
+  --radius: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ink:         #E2E4E1;
-    --slate:       #969C9F;
-    --mute:        #828990;
-    --paper:       #16181A;
-    --surface:     #1E2123;
-    --raised:      #262A2C;
-    --rule:        #33383A;
-    --rule-soft:   #262A2C;
-    --accent:      #D4767F;
-    --accent-dim:  #C46B74;
-    --accent-wash: #2A2224;
-    --on-accent:   #16181A;
+    --ink:         #E4EDE9;
+    --slate:       #9DB3AC;
+    --mute:        #8AA49C;
+    --paper:       #08201B;
+    --surface:     #12312A;
+    --raised:      #163A31;
+    --rule:        #2A4A41;
+    --rule-soft:   #1B3B33;
+    --accent:      #3FB57E;
+    --accent-dim:  #56C48F;
+    --accent-wash: #123328;
+    --on-accent:   #08201B;
     --ok:          #7FA88A;
     --warn:        #C4A059;
     --err:         #D07A7A;
@@ -62,18 +65,18 @@
 }
 
 :root[data-theme="dark"] {
-  --ink:         #E2E4E1;
-  --slate:       #969C9F;
-  --mute:        #828990;
-  --paper:       #16181A;
-  --surface:     #1E2123;
-  --raised:      #262A2C;
-  --rule:        #33383A;
-  --rule-soft:   #262A2C;
-  --accent:      #D4767F;
-  --accent-dim:  #C46B74;
-  --accent-wash: #2A2224;
-  --on-accent:   #16181A;
+  --ink:         #E4EDE9;
+  --slate:       #9DB3AC;
+  --mute:        #8AA49C;
+  --paper:       #08201B;
+  --surface:     #12312A;
+  --raised:      #163A31;
+  --rule:        #2A4A41;
+  --rule-soft:   #1B3B33;
+  --accent:      #3FB57E;
+  --accent-dim:  #56C48F;
+  --accent-wash: #123328;
+  --on-accent:   #08201B;
   --ok:          #7FA88A;
   --warn:        #C4A059;
   --err:         #D07A7A;
@@ -460,7 +463,7 @@ a.card:hover .card-title { color: var(--accent); }
 .signup input {
   flex: 1 1 15rem; min-width: 0;
   font-family: var(--sans); font-size: .95rem; color: var(--ink);
-  background: var(--raised); border: 1px solid var(--rule); border-radius: 0;
+  background: var(--raised); border: 1px solid var(--rule); border-radius: var(--radius);
   padding: .78rem .9rem;
 }
 .signup input::placeholder { color: var(--mute); }
@@ -600,3 +603,8 @@ a.card:hover .card-title { color: var(--accent); }
   .taglist a { padding: .6rem .8rem; }
   .util--theme { width: 46px; height: 46px; }
 }
+
+/* 2px softening, applied at the component level rather than globally so the
+   hairline rules and the corridor diagram stay hard-edged. */
+.btn, .card, .featured, .journey, .jur, .brief, .signup input,
+.field input, .field select, .field textarea, .util--theme { border-radius: var(--radius); }

@@ -128,7 +128,7 @@
 .searchform input {
   flex: 1 1 auto; min-width: 0;
   font-family: var(--serif); font-size: 1.15rem; color: var(--ink);
-  background: var(--raised); border: 1px solid var(--rule); border-radius: 0;
+  background: var(--raised); border: 1px solid var(--rule); border-radius: var(--radius);
   padding: .8rem .9rem;
 }
 .searchform input::placeholder { color: var(--mute); font-family: var(--sans); font-size: .95rem; }
@@ -297,3 +297,5 @@
   .taxrow { grid-template-columns: 1fr; gap: var(--s2); }
   .filterrow .fhead { min-width: 100%; }
 }
+
+.fchip, .searchform input, .locale-escape, .exec, .journey-prompt, .freshness { border-radius: var(--radius); }

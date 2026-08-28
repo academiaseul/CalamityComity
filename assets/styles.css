@@ -195,7 +195,8 @@ a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset:
   font-family: var(--serif);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: .22em;
+  letter-spacing: .14em;
+  white-space: nowrap;
   line-height: 1;
   color: var(--ink);
   text-decoration: none;
@@ -204,7 +205,7 @@ a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset:
 .wordmark:hover { color: var(--ink); }
 
 .lockup { display: inline-block; }
-.lockup .wordmark { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+.lockup .wordmark { font-size: clamp(1.35rem, 3.6vw, 2.15rem); }
 .lockup hr { border: none; border-top: 1px solid var(--rule); margin: var(--s4) 0 var(--s3); }
 .lockup .desc {
   font-family: var(--mono);
@@ -222,7 +223,7 @@ a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset:
   display: flex; align-items: center; gap: var(--s5);
   padding: var(--s5) 0;
 }
-.masthead .wordmark { font-size: 1.15rem; }
+.masthead .wordmark { font-size: 1rem; }
 
 .nav { display: flex; align-items: center; gap: var(--s6); margin-left: auto; }
 .nav-list { display: flex; align-items: center; gap: var(--s6); list-style: none; margin: 0; padding: 0; }

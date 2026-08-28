@@ -12,7 +12,7 @@
   --slate:        #4A5A55;
   --mute:         #5E6F69;
   --paper:        #FFFFFF;
-  --surface:      #F4F7F5;
+  --surface:      #F6F1E9;
   --raised:       #FFFFFF;
   --rule:         #C8D6D1;
   --rule-soft:    #E2EBE7;
@@ -20,6 +20,21 @@
   --accent-dim:   #086139;
   --accent-wash:  #E6F2EC;
   --on-accent:    #FFFFFF;
+
+  /* Pantone Cloud Cream 11-0104 and the deep green field. The three-tone
+     ground: white, cream, green. */
+  --cream:        #EDE6DB;
+  --cream-ink:    #0A3A2F;
+  --cream-slate:  #4A5A55;
+  --cream-mute:   #525F59;
+  --cream-accent: #066239;
+  --cream-rule:   #D8CFC0;
+  --field:        #0A3A2F;
+  --field-ink:    #FFFFFF;
+  --field-slate:  #B8D4CA;
+  --field-mute:   #9BBFB3;
+  --field-accent: #7FD9AC;
+  --field-rule:   #31624F;
 
   /* Semantic — deliberately desaturated, never competing with the accent */
   --ok:           #3D5A45;
@@ -58,6 +73,18 @@
     --accent-dim:  #56C48F;
     --accent-wash: #123328;
     --on-accent:   #08201B;
+    --cream:        #12312A;
+    --cream-ink:    #E4EDE9;
+    --cream-slate:  #9DB3AC;
+    --cream-mute:   #8AA49C;
+    --cream-accent: #3FB57E;
+    --cream-rule:   #2A4A41;
+    --field:        #0F4638;
+    --field-ink:    #FFFFFF;
+    --field-slate:  #B8D4CA;
+    --field-mute:   #9BBFB3;
+    --field-accent: #7FD9AC;
+    --field-rule:   #31624F;
     --ok:          #7FA88A;
     --warn:        #C4A059;
     --err:         #D07A7A;
@@ -77,6 +104,18 @@
   --accent-dim:  #56C48F;
   --accent-wash: #123328;
   --on-accent:   #08201B;
+  --cream:        #12312A;
+  --cream-ink:    #E4EDE9;
+  --cream-slate:  #9DB3AC;
+  --cream-mute:   #8AA49C;
+  --cream-accent: #3FB57E;
+  --cream-rule:   #2A4A41;
+  --field:        #0F4638;
+  --field-ink:    #FFFFFF;
+  --field-slate:  #B8D4CA;
+  --field-mute:   #9BBFB3;
+  --field-accent: #7FD9AC;
+  --field-rule:   #31624F;
   --ok:          #7FA88A;
   --warn:        #C4A059;
   --err:         #D07A7A;
@@ -608,3 +647,40 @@ a.card:hover .card-title { color: var(--accent); }
    hairline rules and the corridor diagram stay hard-edged. */
 .btn, .card, .featured, .journey, .jur, .brief, .signup input,
 .field input, .field select, .field textarea, .util--theme { border-radius: var(--radius); }
+
+/* ---- Ground bands -------------------------------------------------------
+   Three grounds in rotation: white, Cloud Cream, deep green field. Each band
+   redefines the token set locally, so every component inside it — cards,
+   rules, buttons, labels — resolves correctly without a single override. */
+
+.region--cream {
+  background: var(--cream);
+  --ink: var(--cream-ink);
+  --slate: var(--cream-slate);
+  --mute: var(--cream-mute);
+  --accent: var(--cream-accent);
+  --rule: var(--cream-rule);
+  --rule-soft: var(--cream-rule);
+  --surface: var(--cream);
+  --raised: #FFFFFF;
+  color: var(--ink);
+  border-top: none;
+}
+
+.region--green {
+  background: var(--field);
+  --ink: var(--field-ink);
+  --slate: var(--field-slate);
+  --mute: var(--field-mute);
+  --accent: var(--field-accent);
+  --rule: var(--field-rule);
+  --rule-soft: var(--field-rule);
+  --surface: var(--field);
+  --raised: var(--field);
+  --on-accent: var(--field);
+  color: var(--ink);
+  border-top: none;
+}
+.region--green .btn--secondary { border-color: var(--field-ink); color: var(--field-ink); }
+.region--green .btn--secondary:hover { background: rgba(255,255,255,.08); }
+.region--green .btn--primary { background: var(--field-accent); color: var(--field); border-color: var(--field-accent); }

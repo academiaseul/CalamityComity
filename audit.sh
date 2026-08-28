@@ -130,6 +130,23 @@ for f in robots.txt sitemap.xml sitemap-en.xml sitemap-es.xml; do
 done
 
 echo
+echo "════════ 13 · ASSET REFERENCES ════════"
+bad=0
+for p in $PAGES; do
+  if grep -qE '(href|src)="(\.\./)*assets/' "$p"; then
+    note "REL" "$p uses a relative asset path"
+    bad=$((bad+1)); FAIL=1
+  fi
+done
+[ $bad -eq 0 ] && note "ok" "all asset references are root-absolute"
+
+missing=0
+for u in $(grep -hoE '(href|src)="/assets/[^"]*"' $PAGES | sed -E 's/.*="//; s/"$//' | sort -u); do
+  if [ ! -f ".$u" ]; then note "404" "$u referenced but absent"; missing=1; FAIL=1; fi
+done
+[ $missing -eq 0 ] && note "ok" "every referenced asset exists on disk"
+
+echo
 echo "════════════════════════════════════"
 [ $FAIL -eq 0 ] && echo "  AUDIT PASSED" || echo "  AUDIT: findings above"
 rm -f "$tmp" /tmp/broken.txt
